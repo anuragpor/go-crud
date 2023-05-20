@@ -1,6 +1,10 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 // type User struct {
 // 	Email       string `gorm:"primaryKey"`
@@ -17,4 +21,10 @@ type Post struct {
 	gorm.Model
 	Title string
 	Body  string
+}
+
+type User struct {
+	Email       string `gorm:"primaryKey"`
+	Name        string
+	DateOfBirth time.Time
 }
