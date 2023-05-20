@@ -30,6 +30,7 @@ func PostsCreate(c *gin.Context) {
 }
 
 func PostIndex(c *gin.Context) {
+
 	// Get the posts
 	var posts []models.Post
 	initializers.DB.Find(&posts)
@@ -37,5 +38,19 @@ func PostIndex(c *gin.Context) {
 	// Respond with them
 	c.JSON(200, gin.H{
 		"posts": posts,
+	})
+}
+
+func PostShow(c *gin.Context) {
+	//Get id from url
+	id := c.Param("id")
+
+	// Get the post
+	var post models.Post
+	initializers.DB.First(&post, id)
+
+	// Respond with them
+	c.JSON(200, gin.H{
+		"post": post,
 	})
 }
