@@ -24,7 +24,13 @@ type Post struct {
 }
 
 type User struct {
-	Email       string `gorm:"primaryKey"`
-	Name        string
+	Email       string `gorm:"primaryKey;not null"`
+	Name        string `gorm:"not null"`
 	DateOfBirth time.Time
+	Movies      []*Movie `gorm:"many2many:user_movies;"`
+}
+type Movie struct {
+	Movie_id    int     `gorm:"primaryKey;autoIncrement;not null"`
+	Movie_title string  `gorm:"not null"`
+	Users       []*User `gorm:"many2many:user_movies;"`
 }
