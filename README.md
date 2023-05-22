@@ -3,14 +3,14 @@
 
 API handles the following request
 
-	*Register user accepting email id, name, date of birth
-	*List all User and get a user by its email_id.
-	*Update User name and date of birth by email.
-	*Add movies in the movies table accepting Movies_title
-	*Get movie by ID.
-	*Add a list of movies the user has watched.
-	*Delete a movie from a list of movies of a user.
-    	*List all the movies the user has watched.
+	* Register user accepting email id, name, date of birth
+	* List all User and get a user by its email_id.
+	* Update User name and date of birth by email.
+	* Add movies in the movies table accepting Movies_title
+	* Get movie by ID.
+	* Add a list of movies the user has watched.
+	* Delete a movie from a list of movies of a user.
+    * List all the movies the user has watched.
 
 
 
